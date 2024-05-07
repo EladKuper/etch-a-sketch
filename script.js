@@ -1,4 +1,4 @@
-let container = document.querySelector('.container');
+let container = document.getElementById('container');
 
 function makeGrid(x) {
     for (i=0; i<x; i++) {
@@ -11,3 +11,4 @@ function makeGrid(x) {
     }
 }
 
+makeGrid(4);

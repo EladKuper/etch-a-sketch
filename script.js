@@ -6,11 +6,10 @@ function makeGrid(x) {
         for (j=0; j<x; j++) {
             const box = document.createElement('div');
             box.classList.add('box');
-            box.textContent = i+', '+j;
             row.appendChild(box);
         }
         container.appendChild(row);
     }
 }
 
-makeGrid(4);
+makeGrid(16);

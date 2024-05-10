@@ -1,8 +1,21 @@
 #container {
     display: flex;
+    justify-content: center;
 }
 
 .box {
-    border: 1px black solid;
-    padding: 2px;
+    border: 0.3px black solid;
+    padding: 3px;
+    margin: 0.2px;
 }
+
+#gridSize {
+    color: red;
+    justify-content: center;
+    margin: auto;
+}
+
+body {
+    justify-content: center;
+}
+

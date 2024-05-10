@@ -1,13 +1,15 @@
 let container = document.getElementById('container');
 
+//Change the color of a cell
 function changeColor() {
     this.style.backgroundColor = "black";
 }
 
-function makeGrid(x) {
-    for (i=0; i<x; i++) {
+//Create a grid
+function makeGrid(squaresPerSide) {
+    for (i=0; i<squaresPerSide; i++) {
         const row = document.createElement('div');
-        for (j=0; j<x; j++) {
+        for (j=0; j<squaresPerSide; j++) {
             const box = document.createElement('div');
             box.classList.add('box');
             row.appendChild(box);
@@ -17,6 +19,15 @@ function makeGrid(x) {
         container.appendChild(row);
     }
     
+}
+
+//Get input for new grid size
+function getGridSize() {
+    let answer = prompt("Choose a number of squers per side (maximum 100):", "16");
+    if (answer > 100) {
+        alert("The number must be not bigger than 100");
+        getGridSize();
+    }
 }
 
 makeGrid(16);

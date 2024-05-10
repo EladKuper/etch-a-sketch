@@ -30,5 +30,10 @@ function getGridSize() {
     }
 }
 
+//Remove the existing grid
+function removeGridCells() {
+    container.removeChild(container.firstChild);
+}
+
 makeGrid(16);
     

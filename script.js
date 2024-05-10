@@ -23,16 +23,24 @@ function makeGrid(squaresPerSide) {
 
 //Get input for new grid size
 function getGridSize() {
-    let answer = prompt("Choose a number of squers per side (maximum 100):", "16");
-    if (answer > 100) {
+    let inputGridSize = prompt("Choose a number of squers per side (maximum 100):", "16");
+    if (inputGridSize > 100) {
         alert("The number must be not bigger than 100");
         getGridSize();
     }
+    return inputGridSize;
 }
 
 //Remove the existing grid
 function removeGridCells() {
-    container.removeChild(container.firstChild);
+    container.replaceChildren();
+}
+
+//Create a new grid by input
+function makeGridByInput() {
+    let gridSize = getGridSize();
+    removeGridCells();
+    makeGrid(gridSize);
 }
 
 makeGrid(16);
